@@ -73,7 +73,7 @@ export default function Home() {
             
             <Link key={product.id} href={`product-detail/${product.id}`} className="group">
             
-              <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+              <div className="max-w-none aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
             
                   <img
                     src={product.imageSrc}
