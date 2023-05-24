@@ -1,6 +1,81 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+
+const producs = [
+  {
+  id: 1,
+  name: 'Whey Protein 80%',
+  description: 'Suplemento de proteína',
+  price: '100,00',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  },
+  {
+  id: 2,
+  name: 'Creme de Avela 500g',
+  description: 'Creme de Avela',
+  price: '29,99',
+  image: 'https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/73/creme-de-avela-500g-growth-supplements.png'
+  },
+  {
+  id: 3,
+  name: 'Whey Protein 80%',
+  description: 'Suplemento de proteína',
+  price: '100,00',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  },
+  {
+  id: 4,
+  name: 'Whey Protein 80%',
+  description: 'Suplemento de proteína',
+  price: '100,00',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  },
+  {
+  id: 5,
+  name: 'Whey Protein 80%',
+  description: 'Suplemento de proteína',
+  price: '100,00',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  },
+  {
+  id: 6,
+  name: 'Whey Protein 80%',
+  description: 'Suplemento de proteína',
+  price: '100,00',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  },
+  {
+  id: 7,
+  name: 'Whey Protein 80%',
+  description: 'Suplemento de proteína',
+  price: '100,00',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  },
+  {
+  id: 8,
+  name: 'Whey Protein 80%',
+  description: 'Suplemento de proteína',
+  price: '100,00',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  },
+  {
+  id: 9,
+  name: 'Whey Protein 80%',
+  description: 'Suplemento de proteína',
+  price: '100,00',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  },
+  {
+  id: 10,
+  name: 'Whey Protein 80%',
+  description: 'Suplemento de proteína',
+  price: '100,00',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  },
+]
+
+
 export default function Home() {
 
   /* <a href="https://www.google.com/"></a> */
@@ -14,114 +89,25 @@ export default function Home() {
       {/* Aqui é container onde vai estar meus cards */}
       <div className="max-w-5xl mx-auto">
         {/* Aqui é onde eu preciso passar as classes do flex-box */}
-        <div className="flex flex-wrap grid grid-cols-4 ">
+        <div className="flex flex-wrap grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ld:grid-cols-4">
           
+          {producs.map((product) => (
+            <div key={product.id}>
+              <Link href={`/product-detail/${product.id}`}>
+              <div className="mx-4 my-4 gap-4 cursor-pointer border border-gray-200">
+                <img src={product.image} alt="" className="w-full h-64 object-cover"/>
           
-          {/* Aqui eu renderizo meus cards */}
-          <Link href="/product-detail">
-            <div className="mx-4 my-4 gap-4 cursor-pointer border border-gray-200">
-              <img src="whey.webp" alt="" className="w-full h-64 object-cover"/>
-        
-              <div className="p-4">
-                
-                <h2 className="text-lg font-medium">Whey Protein 3w</h2>
-                <p className="text-gray-600">Suplemento de proteína</p>
-                <p className="text-red-600 font-medium">R$ 199,99</p>
-              </div>
-          </div>
+                <div className="p-4">
+                  
+                  <h2 className="text-lg font-medium">{product.name}</h2>
+                  <p className="text-gray-600">{product.description}</p>
+                  <p className="text-red-600 font-medium">R$ {product.price}</p>
+                </div>
+            </div>
           </Link>
+            </div>
+          ))}
           
-          <Link href="/product-detail">
-            <div className="mx-4 my-4 gap-4 cursor-pointer border border-gray-200">
-              <img src="whey.webp" alt="" className="w-full h-64 object-cover"/>
-        
-              <div className="p-4">
-                
-                <h2 className="text-lg font-medium">Whey Protein 3w</h2>
-                <p className="text-gray-600">Suplemento de proteína</p>
-                <p className="text-red-600 font-medium">R$ 199,99</p>
-              </div>
-          </div>
-          </Link>
-
-          <Link href="/product-detail">
-            <div className="mx-4 my-4 gap-4 cursor-pointer border border-gray-200">
-              <img src="whey.webp" alt="" className="w-full h-64 object-cover"/>
-        
-              <div className="p-4">
-                
-                <h2 className="text-lg font-medium">Whey Protein 3w</h2>
-                <p className="text-gray-600">Suplemento de proteína</p>
-                <p className="text-red-600 font-medium">R$ 199,99</p>
-              </div>
-          </div>
-          </Link>
-
-          <Link href="/product-detail">
-            <div className="mx-4 my-4 gap-4 cursor-pointer border border-gray-200">
-              <img src="whey.webp" alt="" className="w-full h-64 object-cover"/>
-        
-              <div className="p-4">
-                
-                <h2 className="text-lg font-medium">Whey Protein 3w</h2>
-                <p className="text-gray-600">Suplemento de proteína</p>
-                <p className="text-red-600 font-medium">R$ 199,99</p>
-              </div>
-          </div>
-          </Link>
-
-          <Link href="/product-detail">
-            <div className="mx-4 my-4 gap-4 cursor-pointer border border-gray-200">
-              <img src="whey.webp" alt="" className="w-full h-64 object-cover"/>
-        
-              <div className="p-4">
-                
-                <h2 className="text-lg font-medium">Whey Protein 3w</h2>
-                <p className="text-gray-600">Suplemento de proteína</p>
-                <p className="text-red-600 font-medium">R$ 199,99</p>
-              </div>
-          </div>
-          </Link>
-
-          <Link href="/product-detail">
-            <div className="mx-4 my-4 gap-4 cursor-pointer border border-gray-200">
-              <img src="whey.webp" alt="" className="w-full h-64 object-cover"/>
-        
-              <div className="p-4">
-                
-                <h2 className="text-lg font-medium">Whey Protein 3w</h2>
-                <p className="text-gray-600">Suplemento de proteína</p>
-                <p className="text-red-600 font-medium">R$ 199,99</p>
-              </div>
-          </div>
-          </Link>
-
-          <Link href="/product-detail">
-            <div className="mx-4 my-4 gap-4 cursor-pointer border border-gray-200">
-              <img src="whey.webp" alt="" className="w-full h-64 object-cover"/>
-        
-              <div className="p-4">
-                
-                <h2 className="text-lg font-medium">Whey Protein 3w</h2>
-                <p className="text-gray-600">Suplemento de proteína</p>
-                <p className="text-red-600 font-medium">R$ 199,99</p>
-              </div>
-          </div>
-          </Link>
-
-          <Link href="/product-detail">
-            <div className="mx-4 my-4 gap-4 cursor-pointer border border-gray-200">
-              <img src="whey.webp" alt="" className="w-full h-64 object-cover"/>
-        
-              <div className="p-4">
-                
-                <h2 className="text-lg font-medium">Whey Protein 3w</h2>
-                <p className="text-gray-600">Suplemento de proteína</p>
-                <p className="text-red-600 font-medium">R$ 199,99</p>
-              </div>
-          </div>
-          </Link>
-
           {/* Acima renderizo meus cards */}
           
         </div>

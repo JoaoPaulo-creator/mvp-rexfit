@@ -6,7 +6,7 @@ const product = {
 
 
     name: 'Basic Tee 6-Pack',
-    price: '$192',
+    price: 'R$ 100,00',
     href: '#',
     breadcrumbs: [
         { id: 1, name: 'Geral', href: '/' },
@@ -72,7 +72,7 @@ export default function ProductDetail(){
                 <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
                     <div className="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
                         <img
-                        src='whey.webp'
+                        src='https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png'
                         alt='product image'
                         className="h-full w-full object-cover object-center"
                         />
@@ -80,14 +80,14 @@ export default function ProductDetail(){
                 <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
                     <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
                         <img
-                            src='whey.webp'
+                            src='https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png'
                             alt='product image'
                             className="h-full w-full object-cover object-center"
                         />
                     </div>
                     <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
                         <img
-                            src='whey.webp'
+                            src='https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png'
                             alt='product image'
                             className="h-full w-full object-cover object-center"
                         />
