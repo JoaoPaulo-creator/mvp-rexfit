@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 
 
@@ -81,7 +82,7 @@ export default function Home() {
             <div key={product.id}>
               <Link href={`/product-detail/${product.id}`}>
               <div className="mx-4 my-4 gap-4 cursor-pointer border border-gray-200">
-                <img src={product.image} alt="" className="w-full h-64 object-cover"/>
+                <img width={400} height={400} src={product.image} alt="" className="w-full h-64 object-cover"/>
           
                 <div className="p-4">
                   
