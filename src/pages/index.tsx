@@ -19,10 +19,10 @@ const producs = [
   },
   {
   id: 3,
-  name: 'Whey Protein 80%',
-  description: 'Suplemento de proteína',
-  price: '100,00',
-  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  name: 'Creatina',
+  description: 'Aminoacido',
+  price: '79,92',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/72/creatina-monohidratada-growth.png"
   },
   {
   id: 4,
@@ -40,34 +40,20 @@ const producs = [
   },
   {
   id: 6,
-  name: 'Whey Protein 80%',
-  description: 'Suplemento de proteína',
-  price: '100,00',
-  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  name: 'Creme de Avela 500g',
+  description: 'Creme de Avela',
+  price: '29,99',
+  image: 'https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/73/creme-de-avela-500g-growth-supplements.png'
   },
   {
   id: 7,
-  name: 'Whey Protein 80%',
-  description: 'Suplemento de proteína',
-  price: '100,00',
-  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
+  name: 'Creatina',
+  description: 'Aminoacido',
+  price: '79,92',
+  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/72/creatina-monohidratada-growth.png"
   },
   {
   id: 8,
-  name: 'Whey Protein 80%',
-  description: 'Suplemento de proteína',
-  price: '100,00',
-  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
-  },
-  {
-  id: 9,
-  name: 'Whey Protein 80%',
-  description: 'Suplemento de proteína',
-  price: '100,00',
-  image: "https://www.gsuplementos.com.br/upload/growth-layout-personalizado/produto/185/produto-selo-topo-new-v3.png"
-  },
-  {
-  id: 10,
   name: 'Whey Protein 80%',
   description: 'Suplemento de proteína',
   price: '100,00',
@@ -87,9 +73,9 @@ export default function Home() {
       </Head>
       
       {/* Aqui é container onde vai estar meus cards */}
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto mt-6 mb-6">
         {/* Aqui é onde eu preciso passar as classes do flex-box */}
-        <div className="flex flex-wrap grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ld:grid-cols-4">
+        <div className="flex flex-wrap grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ld:grid-cols-4 bg-gray-200">
           
           {producs.map((product) => (
             <div key={product.id}>
